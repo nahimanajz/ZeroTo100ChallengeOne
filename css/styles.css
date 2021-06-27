@@ -1,3 +1,27 @@
+html,body{
+    margin: 0;
+}
+body {
+
+    display: grid;
+    gap: 20px;
+    grid-area: 'header'
+                'main'
+                'footer' ;
+}
+header {
+   display:grid;
+    place-items: center;
+    background:  #9400d3;
+    color: white;
+    min-height: 200px;
+    border-bottom-left-radius: 15% 10%;
+    border-bottom-right-radius: 10% 15%;
+    animation: font-anim 1.2s ease-in-out;
+    font-size:32px ;
+
+}
+
 .user {
 display:flex;
  flex-wrap: wrap;
@@ -14,12 +38,12 @@ display:flex;
 }
 .user > div:hover{
     color:white;
-    background:green
+    background: #9400d3
 }
 button {
     text-align: center;
     padding: 10px;
-    border: 1px solid green;
+    border: 1px solid  #9400d3;
     border-radius: 8px;
     align-self: center;
 }
@@ -29,6 +53,37 @@ button:hover{
     border-color: white;
 }
 .posts>ul {
-    background: #c4c2c3;
+    padding:16px 64px;
+    background:  #9400d3;
     margin-top: 20px;
+}
+.posts>ul li {
+    background: rgba(255, 255, 255, 0.14);
+    list-style-type: none;
+    margin: 4px;
+    padding: 8px;
+    font-size: 18px;
+    color: white;
+    animation: post-anim 2s ease-in
+}
+
+@keyframes font-anim{
+    0%{
+        font-size: 64px
+    }
+    50%{
+        font-size: 32px
+    }
+    100%{
+        font-size: 64px;
+    }
+}
+@keyframes post-anim {
+    from {
+        opacity: 0;
+        background: rgb(137, 216, 137);
+    }
+    to{
+        opacity: 1
+    }
 }
