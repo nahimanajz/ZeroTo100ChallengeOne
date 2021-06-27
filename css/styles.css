@@ -28,3 +28,6 @@ button:hover{
     background: rgba(255, 0, 0, 0.2);
     border-color: white;
 }
+.posts {
+    background: #c4c2c3;
+}
