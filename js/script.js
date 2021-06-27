@@ -21,6 +21,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 const getUserPosts = (id) =>{
  const ul = newTag('ul')
+ const closeBtn = newTag('button')
+ closeBtn.innerText = 'X'
+ closeBtn.addEventListener('click',()=>document.querySelector('ul').style.display='none')
+ul.appendChild(closeBtn)
 
  fetch(`https://jsonplaceholder.typicode.com/users/${id}/posts`).
  then(posts => posts.json()).
